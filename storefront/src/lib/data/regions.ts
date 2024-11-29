@@ -6,6 +6,7 @@ import { HttpTypes } from "@medusajs/types"
 import { getCacheOptions } from "./cookies"
 
 export const listRegions = async () => {
+  // console.log('listRegions', await getCacheOptions("regions"))
   const next = {
     ...(await getCacheOptions("regions")),
   }
@@ -38,6 +39,7 @@ const regionMap = new Map<string, HttpTypes.StoreRegion>()
 export const getRegion = async (countryCode: string) => {
   try {
     if (regionMap.has(countryCode)) {
+      // console.log('getRegion', regionMap.get(countryCode))
       return regionMap.get(countryCode)
     }
 
@@ -55,7 +57,7 @@ export const getRegion = async (countryCode: string) => {
 
     const region = countryCode
       ? regionMap.get(countryCode)
-      : regionMap.get("us")
+      : regionMap.get("gb")
 
     return region
   } catch (e: any) {

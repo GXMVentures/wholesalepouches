@@ -401,11 +401,7 @@ export async function setShippingAddress(
     return e.message
   }
 
-  redirect(
-    `/${formData.get(
-      "shipping_address.country_code"
-    )}/checkout?step=billing-address`
-  )
+  redirect(`/checkout?step=billing-address`)
 }
 
 export async function setBillingAddress(

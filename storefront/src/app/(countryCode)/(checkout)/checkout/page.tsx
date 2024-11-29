@@ -13,6 +13,7 @@ export const metadata: Metadata = {
 
 export default async function Checkout() {
   const cart = (await retrieveCart()) as B2BCart
+  console.log('checkout', cart)
 
   if (!cart) {
     return notFound()

@@ -3,7 +3,7 @@ import { CalendarMini, DocumentText } from "@medusajs/icons"
 import { Button, clx, Container } from "@medusajs/ui"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import { StoreQuoteResponse } from "@starter/types"
-import QuoteStatusBadge from "app/[countryCode]/(main)/account/@dashboard/quotes/components/quote-status-badge"
+import QuoteStatusBadge from "app/(countryCode)/(main)/account/@dashboard/quotes/components/quote-status-badge"
 import Image from "next/image"
 import { useMemo } from "react"
 
@@ -88,9 +88,8 @@ const QuoteCard = ({ quote }: QuoteCardProps) => {
             })}
           </span>
           {"·"}
-          <span className="pl-2">{`${numberOfLines} ${
-            numberOfLines > 1 ? "items" : "item"
-          }`}</span>
+          <span className="pl-2">{`${numberOfLines} ${numberOfLines > 1 ? "items" : "item"
+            }`}</span>
         </div>
 
         <div className="pl-4">

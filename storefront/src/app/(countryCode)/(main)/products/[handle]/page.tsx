@@ -49,9 +49,9 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   const { handle } = params
   const region = await getRegion(params.countryCode)
 
-  if (!region) {
-    notFound()
-  }
+  // if (!region) {
+  //   notFound()
+  // }
 
   const product = await getProductByHandle(handle, region.id)
 
@@ -74,9 +74,9 @@ export default async function ProductPage(props: Props) {
   const params = await props.params
   const region = await getRegion(params.countryCode)
 
-  if (!region) {
-    notFound()
-  }
+  // if (!region) {
+  //   notFound()
+  // }
 
   const pricedProduct = await getProductByHandle(params.handle, region.id)
   if (!pricedProduct) {
