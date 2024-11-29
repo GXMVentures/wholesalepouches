@@ -76,13 +76,14 @@ export default async function CategoryPage(props: Props) {
     notFound()
   }
 
+
   return (
     <CategoryTemplate
       categories={categories}
       currentCategory={currentCategory}
       sortBy={sortBy}
       page={page}
-      countryCode={params.countryCode}
+      countryCode={'gb'}
     />
   )
 }
